@@ -25,12 +25,12 @@ void LMS::addStudentToCourse(int student_id, int course_id) {
     }
 }
 void LMS::printDetails() {
-    cout<<"LMS Name:"<<this->name<<endl;
-    cout<<"Students:"<<endl;
+    cout<<"LMS Name: "<<this->name<<endl;
+    cout<<"Students: "<<endl;
     for (auto student : this->students) {
         student.printDetails();
     }
-    cout<<"Courses:"<<endl;
+    cout<<"Courses: "<<endl;
     for (auto course : this->courses) {
         course.printDetails();
     }

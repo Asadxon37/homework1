@@ -36,8 +36,8 @@ bool Course::addStudent(const Student& student) {
 
 }
 void Course::printDetails() {
-    cout<<"Course ID:"<<id<<",Name:"<<name<<",Credits:"<<credits<<endl;
-    cout<<"Enrolled Students:";
+    cout<<"Course ID: "<<id<<", Name: "<<name<<", Credits: "<<credits<<endl;
+    cout<<"Enrolled Students: ";
     for (int k:students) {
         cout<<k<<" ";
     }

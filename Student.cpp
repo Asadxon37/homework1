@@ -40,8 +40,8 @@ void Student::dropCourse(Course course) {
     enrolledCourses.erase(remove(enrolledCourses.begin(), enrolledCourses.end(), course.getId()), enrolledCourses.end());
 }
 void Student::printDetails() {
-    cout << "Student ID:" << id << ",Name:" << name << endl;
-    cout << "Enrolled Courses:";
+    cout << "Student ID: " << id << ", Name: " << name << endl;
+    cout << "Enrolled Courses: ";
 
     for (size_t i = 0; i < enrolledCourses.size(); i++) {
         cout << enrolledCourses[i];
