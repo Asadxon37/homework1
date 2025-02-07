@@ -29,6 +29,15 @@ bool Student::takeCourse(Course course) {
     }
     return false;
 }
+bool Student::takesCourse(Course course) {
+    for (int courseId : enrolledCourses) {
+        if (courseId == course.getId()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 void Student::dropCourse(Course course) {
     enrolledCourses.erase(remove(enrolledCourses.begin(), enrolledCourses.end(), course.getId()), enrolledCourses.end());

@@ -9,6 +9,9 @@ LMS::LMS(string name) {
 void LMS::addCourse(Course course) {
     this->courses.push_back(course);
 }
+void LMS::addStudent(Student student) {
+    students.push_back(student);
+}
 void LMS::addStudentToCourse(int student_id, int course_id) {
     for (int i = 0; i < this->courses.size(); i++) {
         if (courses[i].getId() == course_id) {
