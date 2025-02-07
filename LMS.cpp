@@ -13,9 +13,9 @@ void LMS::addStudent(Student student) {
     students.push_back(student);
 }
 void LMS::addStudentToCourse(int student_id, int course_id) {
-    for (Course& course : courses) {  // Use reference
+    for (Course& course : courses) {
         if (course.getId() == course_id) {
-            for (Student& student : students) {  // Use reference
+            for (Student& student : students) {
                 if (student.getId() == student_id) {
                     course.addStudent(student);
                     student.takeCourse(course);

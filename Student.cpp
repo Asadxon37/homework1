@@ -42,11 +42,11 @@ void Student::dropCourse(Course course) {
 void Student::printDetails() {
     cout << "Student ID: " << id << ", Name: " << name << endl;
     cout << "Enrolled Courses: ";
+
     for (size_t i = 0; i < enrolledCourses.size(); i++) {
         cout << enrolledCourses[i];
-        if (i != enrolledCourses.size() - 1) {
-            cout << " ";
-        }
+        cout << " ";
     }
+
     cout << endl;
 }
