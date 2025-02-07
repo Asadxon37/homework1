@@ -30,7 +30,7 @@ void LMS::printDetails() {
     for (auto student : this->students) {
         student.printDetails();
     }
-    cout<<"Courses: "<<endl;
+    cout<<"Courses:"<<endl;
     for (auto course : this->courses) {
         course.printDetails();
     }
