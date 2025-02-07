@@ -21,7 +21,8 @@ int main() {
     int number_courses;
     cin>>number_courses;
     for(int i=0;i<number_courses;i++){
-        string id,name;
+        string name;
+        int id;
         int credit;
         cin>>id>>name>>credit;
         Course c1(id, name, credit);
