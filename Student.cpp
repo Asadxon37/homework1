@@ -44,9 +44,9 @@ void Student::printDetails() {
     cout << "Enrolled Courses: ";
     for (size_t i = 0; i < enrolledCourses.size(); i++) {
         cout << enrolledCourses[i];
-        if (i == enrolledCourses.size() - 1) cout << "~";  // Add ~ at the end
-        cout << " ";
+        if (i != enrolledCourses.size() - 1) {
+            cout << " ";
+        }
     }
     cout << endl;
-
 }
