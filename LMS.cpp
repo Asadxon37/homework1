@@ -13,12 +13,12 @@ void LMS::addStudent(Student student) {
     students.push_back(student);
 }
 void LMS::addStudentToCourse(int student_id, int course_id) {
-    for (int i = 0; i < this->courses.size(); i++) {
-        if (courses[i].getId() == course_id) {
-            for (int j = 0; j < this->students.size(); j++) {
-                if (student_id == this->students[j].getId()) {
-                    courses[i].addStudent(students[j]);
-                    students[j].takeCourse(courses[i]);
+    for (Course& course : courses) {  // Use reference
+        if (course.getId() == course_id) {
+            for (Student& student : students) {  // Use reference
+                if (student.getId() == student_id) {
+                    course.addStudent(student);
+                    student.takeCourse(course);
                 }
             }
         }

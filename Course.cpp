@@ -27,7 +27,7 @@ bool Course::hasStudent(Student student) {
     return false;
 
 }
-bool Course::addStudent(Student student) {
+bool Course::addStudent(const Student& student) {
     if (!hasStudent(student)) {
         students.push_back(student.getId());
         return true;

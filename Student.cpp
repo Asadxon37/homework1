@@ -29,14 +29,11 @@ bool Student::takeCourse(Course course) {
     }
     return false;
 }
-bool Student::takesCourse(Course course) {
-    for (int courseId : enrolledCourses) {
-        if (courseId == course.getId()) {
-            return true;
-        }
-    }
-    return false;
+bool Student::takesCourse(const Course& course) const {
+    return find(enrolledCourses.begin(), enrolledCourses.end(), course.getId()) != enrolledCourses.end();
 }
+
+
 
 
 void Student::dropCourse(Course course) {
@@ -45,8 +42,11 @@ void Student::dropCourse(Course course) {
 void Student::printDetails() {
     cout << "Student ID: " << id << ", Name: " << name << endl;
     cout << "Enrolled Courses: ";
-    for (int courseId : enrolledCourses) {
-        cout << courseId << " ";
+    for (size_t i = 0; i < enrolledCourses.size(); i++) {
+        cout << enrolledCourses[i];
+        if (i == enrolledCourses.size() - 1) cout << "~";  // Add ~ at the end
+        cout << " ";
     }
     cout << endl;
+
 }

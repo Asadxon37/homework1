@@ -19,7 +19,7 @@ class Course {
     string getName()const;
     int getCredits()const;
     bool hasStudent(Student);
-    bool addStudent(Student);
+    bool addStudent(const Student& student);
     bool dropStudent(Student);
     void printDetails();
 

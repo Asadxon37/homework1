@@ -20,7 +20,7 @@ class Student {
     string getName() const;
     vector<int> getEnrolledCourses() const;
 
-    bool takesCourse(Course);
+    bool takesCourse(const Course& course) const;
     bool takeCourse(Course);
     void dropCourse(Course);
     void printDetails();
